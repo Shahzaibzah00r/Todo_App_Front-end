@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap");
+.mainPage {
+  height: 93vh;
+}
+.heading {
+  font-size: 60px;
+  padding: 5px 10px;
+  font-family: "Work Sans", sans-serif;
+}

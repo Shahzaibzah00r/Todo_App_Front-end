@@ -1,0 +1,8 @@
+.links {
+  color: unset;
+  list-style: none;
+  text-decoration: none;
+}
+.navItems {
+  color: inherit;
+}

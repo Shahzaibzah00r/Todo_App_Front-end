@@ -1,0 +1,25 @@
+.main {
+  background-image: url("./bg.jpeg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  min-height: 95vh;
+}
+.title {
+  font-size: 4rem;
+}
+
+.spanMain {
+  color: red;
+  margin-top: 100px;
+  font-size: larger;
+}
+.mainContent {
+  text-align: center;
+}
+
+.buttons {
+  padding: 22px;
+}
