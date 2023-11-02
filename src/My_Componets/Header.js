@@ -6,8 +6,6 @@ function Header() {
   const navigate = useNavigate();
   const [lcData, setLcData] = useState();
 
-  // console.log(localData.userData.fName);
-
   const btnLogout = (e) => {
     e.preventDefault();
     const isData = localStorage.getItem("newData");
@@ -23,7 +21,6 @@ function Header() {
       setLcData(localData.userData.fName);
     }
   }, [btnLogout, setLcData, localData]);
-  // console.log(localData);s
   return (
     <Navbar expand="lg" style={{ color: "black" }} variant="dark" bg="dark">
       <Container className="d-flex">
@@ -38,17 +35,19 @@ function Header() {
           className=" d-flex justify-content-between"
         >
           <Nav>
-            <Nav.Link href="/">
-              <Link to="/" className="links navItems">
-                Home
-              </Link>
-            </Nav.Link>
             {localData ? (
-              <Nav.Link href="/mynotes">
-                <Link to="/mynotes" className="links navItems">
-                  My-Notes
-                </Link>
-              </Nav.Link>
+              <>
+                {/* <Nav.Link href="/">
+                  <Link to="/" className="links navItems">
+                    Home
+                  </Link>
+                </Nav.Link> */}
+                <Nav.Link href="/mynotes">
+                  <Link to="/mynotes" className="links navItems">
+                    My-Notes
+                  </Link>
+                </Nav.Link>
+              </>
             ) : (
               ""
             )}

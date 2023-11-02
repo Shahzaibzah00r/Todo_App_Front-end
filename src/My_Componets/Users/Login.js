@@ -6,7 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loading from "../Loader/Loading";
 import Errors from "../Errors/Errors";
-// import "../links.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -19,7 +18,6 @@ const Login = () => {
     const info = localStorage.getItem("newData");
     if (info) {
       navigate("/Mynotes");
-      // console.log("Info is:", info);
     }
   }, []);
 
@@ -52,14 +50,12 @@ const Login = () => {
       if (sendLogin) {
         showAlert("User logged in", "success");
         navigate("/Mynotes");
-        localStorage.setItem("newData", JSON.stringify(res.data));
+        localStorage.setItem("newData", JSON.stringify(sendLogin.data));
       }
     } catch (error) {
-      // alert(error.message);
       showAlert("Invalid email or password", "danger");
       setLoading(false);
     }
-    // }
   };
 
   return (
@@ -110,11 +106,10 @@ const Login = () => {
               {loading && <Loading />}
             </div>
             <div>
-              <Button variant="outline-secondary" className="mb-5 " size="sm">
-                <Link to="/register" className="links">
-                  Click me register
-                </Link>
-              </Button>
+              No account?{" "}
+              <a id="signup" aria-label="Create a Microsoft account">
+                <Link to="/register">Create one!</Link>
+              </a>
             </div>
           </Form>
         </div>

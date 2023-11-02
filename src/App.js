@@ -1,5 +1,5 @@
 import Header from "./My_Componets/Header";
-import Footer from "./My_Componets//Footer/Footer";
+// import Footer from "./My_Componets//Footer/Footer";
 import LandingPage from "./My_Componets/LadingPage/LandingPage";
 import { Route, Routes } from "react-router-dom";
 import Mynotes from "./My_Componets/MyNotes/Mynotes";

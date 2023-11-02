@@ -4,7 +4,7 @@ import "./mainPage.css";
 
 const MainContent = ({ title, child }) => {
   return (
-    <div className="mainPage" style={{ backgroundColor: "#f7f5ee" }}>
+    <div className="mainPage">
       <Container>
         <Row>
           <div className="page">
