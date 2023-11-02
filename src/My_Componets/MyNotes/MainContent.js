@@ -10,8 +10,7 @@ const MainContent = ({ title, child }) => {
           <div className="page">
             {title && (
               <>
-                <h1 className="heading">{title}</h1>
-                <hr />
+                <h1 className="heading mt-4">{title}</h1>
               </>
             )}
             {child}

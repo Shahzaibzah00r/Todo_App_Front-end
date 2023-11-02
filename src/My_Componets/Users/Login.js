@@ -62,7 +62,7 @@ const Login = () => {
     <MainContent
       title="LOGIN"
       child={
-        <div className=" w-50  m-auto p-3 d-flex justify-content-center  border bg-light rounded">
+        <div className=" w-100  m-auto p-3 d-flex justify-content-center  border bg-light rounded">
           <Form
             onSubmit={handleSubmit}
             method="POST"

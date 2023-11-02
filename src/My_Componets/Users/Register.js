@@ -53,8 +53,8 @@ const Register = () => {
       title="Register new user"
       child={
         <>
-          <div className=" w-50 d-flex justify-content-center border bg-light m-auto p-5 rounded">
-            <Form onSubmit={handleSubmit} className="loginBg w-100 mt-2">
+          <div className=" w-100 d-flex justify-content-center border bg-light m-auto p-3 rounded">
+            <Form onSubmit={handleSubmit} className="loginBg w-100 mt-1">
               {isError && (
                 <Errors child={isError.message} variant={isError.type} />
               )}
@@ -112,7 +112,7 @@ const Register = () => {
                 <Button
                   variant="primary"
                   type="submit"
-                  className="mb-3 me-3 mt-3 d-flex "
+                  className="mb-2 me-3 mt-3 d-flex "
                 >
                   Submit
                 </Button>
