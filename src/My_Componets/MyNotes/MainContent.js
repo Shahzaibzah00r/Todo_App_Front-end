@@ -4,13 +4,15 @@ import "./mainPage.css";
 
 const MainContent = ({ title, child }) => {
   return (
-    <div className="mainPage">
+    <div className="mainPage container-fluid">
       <Container>
         <Row>
           <div className="page">
             {title && (
               <>
-                <h1 className="heading mt-4">{title}</h1>
+                <h1 className="heading m-auto p-3 d-flex justify-content-center  ">
+                  {title}
+                </h1>
               </>
             )}
             {child}

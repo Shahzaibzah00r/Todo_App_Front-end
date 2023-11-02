@@ -70,6 +70,7 @@ function CreateNode() {
         onClick={handleShow}
         className="ms-3 p-2 px-3 fw-bold"
         size="sm"
+        title="Create Node"
       >
         Create New Note
       </Button>

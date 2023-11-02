@@ -85,11 +85,12 @@ const Mynotes = () => {
                   placeholder="Search here..."
                   className="pe-5"
                   onChange={(e) => setSearch(e.target.value)}
+                  title="Search bar"
                 />
               </Col>
             </Row>
           </div>
-          <div>
+          <div className="mt-3">
             {notes.length > 0 ? (
               notes
                 .filter((note) => {
@@ -104,9 +105,10 @@ const Mynotes = () => {
                 .map((note) => {
                   return (
                     <Accordion>
-                      <Card className="m-3">
+                      <Card className="m-1">
                         <Card.Header
                           className="d-flex "
+                          lege
                           style={
                             note.done === true
                               ? {
@@ -118,12 +120,17 @@ const Mynotes = () => {
                                 }
                           }
                         >
+                          {/* <legend>General Information</legend> */}
+
                           <Form.Check
-                            className="me-2 h2 mt-2"
+                            className="me-2 h4 m-auto"
                             checked={note.done}
                             type="checkbox"
                             disabled={note.done}
                             onClick={() => handleCheckbox(note._id)}
+                            style={{
+                              cursor: "pointer",
+                            }}
                           />
                           <span
                             style={{
@@ -157,6 +164,7 @@ const Mynotes = () => {
                           <div className="d-flex align-items-center ">
                             <EditNodes child={note._id} disable={note.done} />
                             <Button
+                              title="Delete-Node"
                               variant="danger"
                               onClick={(event) =>
                                 deleteHandlerBtn(event, note._id)

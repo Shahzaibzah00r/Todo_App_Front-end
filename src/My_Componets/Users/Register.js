@@ -53,7 +53,7 @@ const Register = () => {
       title="Register new user"
       child={
         <>
-          <div className=" w-100 d-flex justify-content-center border bg-light m-auto p-3 rounded">
+          <div className=" m-auto col-sm-12 col-md-10 col-lg-6 d-flex justify-content-center border bg-light m-auto p-3 rounded">
             <Form onSubmit={handleSubmit} className="loginBg w-100 mt-1">
               {isError && (
                 <Errors child={isError.message} variant={isError.type} />

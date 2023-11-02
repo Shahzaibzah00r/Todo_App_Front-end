@@ -62,12 +62,13 @@ const Login = () => {
     <MainContent
       title="LOGIN"
       child={
-        <div className=" w-100  m-auto p-3 d-flex justify-content-center  border bg-light rounded">
+        <div className="m-auto col-sm-12 col-md-10 col-lg-6 p-3 d-flex justify-content-center  border bg-light rounded">
           <Form
             onSubmit={handleSubmit}
             method="POST"
-            className="loginBg w-100 mt-5"
-            size="sm"
+            className="loginBg w-100 mt-5 "
+            // className="loginBg mt-5  "
+            // size="sm"
           >
             {isError && (
               <Errors child={isError.message} variant={isError.type} />

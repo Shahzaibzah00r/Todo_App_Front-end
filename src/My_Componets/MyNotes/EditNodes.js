@@ -72,6 +72,7 @@ function EditNodes(props) {
         onClick={handleShow}
         className="mx-2 p-2 px-3 "
         size="sm"
+        title="Edit-Node"
       >
         Edit
       </Button>

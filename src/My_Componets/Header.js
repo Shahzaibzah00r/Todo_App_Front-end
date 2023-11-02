@@ -27,7 +27,7 @@ function Header() {
     <Navbar expand="lg" variant="dark" bg="dark">
       <Container>
         <Navbar.Brand href="/">
-          <Link to="/" className="links">
+          <Link to="/" className="links" title="Todo-App">
             To-Do-APP
           </Link>
         </Navbar.Brand>
