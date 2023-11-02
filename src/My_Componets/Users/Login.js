@@ -19,7 +19,7 @@ const Login = () => {
     const info = localStorage.getItem("newData");
     if (info) {
       navigate("/Mynotes");
-      console.log("Info is:", info);
+      // console.log("Info is:", info);
     }
   }, []);
 
@@ -32,7 +32,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
+
     try {
       const config = {
         headers: {
@@ -40,28 +40,23 @@ const Login = () => {
         },
       };
       setLoading(true);
-      await axios
+      const sendLogin = await axios
         // .post("http://localhost:5000/login", { email, password }, config)
         .post(
           "https://todoapplication.up.railway.app/login",
           { email, password },
           config
-        )
-        .then((res) => {
-          if (res.data) {
-            showAlert("User logged in", "success");
-            navigate("/Mynotes");
-            localStorage.setItem("newData", JSON.stringify(res.data));
-            
-          } else {
-            console.log("Invalid credentials from server");
-            showAlert("Credentials from server", "danger");
-          }
-        });
+        );
       setLoading(false);
+
+      if (sendLogin) {
+        showAlert("User logged in", "success");
+        navigate("/Mynotes");
+        localStorage.setItem("newData", JSON.stringify(res.data));
+      }
     } catch (error) {
-      alert(error.message);
-      // showAlert("Invalid credentials from catch statement", "danger");
+      // alert(error.message);
+      showAlert("Invalid email or password", "danger");
       setLoading(false);
     }
     // }

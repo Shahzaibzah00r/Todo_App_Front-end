@@ -26,14 +26,14 @@ const Register = () => {
         }
       );
       if (registerRes) {
-        console.log("registerRes:", registerRes);
+        // console.log("registerRes:", registerRes);
         navigate("/login");
       } else {
         navigate("/");
       }
     } catch (error) {
       alert(error.message);
-      console.log("error in register res:", error);
+      // console.log("error in register res:", error);
     }
   };
 
