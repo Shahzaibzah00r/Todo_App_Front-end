@@ -25,7 +25,7 @@ function Header() {
   }, [btnLogout, setLcData, localData]);
   return (
     <Navbar expand="lg" variant="dark" bg="dark">
-      <Container fluid>
+      <Container>
         <Navbar.Brand href="/">
           <Link to="/" className="links">
             To-Do-APP
@@ -47,24 +47,13 @@ function Header() {
             )}
           </Nav>
 
-          <Nav className=" me-5 " style={{ maxHeight: "100px" }} navbarScroll>
+          <Nav style={{ maxHeight: "100px" }} navbarScroll>
             {localData ? (
               <>
-                
-                <img
-                  className=" me-2 my-auto"
-                  src={localData.userData.profilePic}
-                  style={{
-                    height: "35px",
-                    width: "35px",
-                    cursor: "pointer",
-                    borderRadius: "100%",
-                  }}
-                />
                 <NavDropdown
                   title={lcData}
                   id="navbarScrollingDropdown"
-                  className=" me-5 "
+                  className=" me-1 "
                 >
                   <NavDropdown.Item href="profile">
                     <Link to="/profile" className="links navItems">
@@ -76,6 +65,16 @@ function Header() {
                     Logout
                   </NavDropdown.Item>
                 </NavDropdown>
+                <img
+                  className=" my-auto"
+                  src={localData.userData.profilePic}
+                  style={{
+                    height: "35px",
+                    width: "35px",
+                    cursor: "pointer",
+                    borderRadius: "100%",
+                  }}
+                />
               </>
             ) : (
               <Nav>
