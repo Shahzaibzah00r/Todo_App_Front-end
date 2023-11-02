@@ -106,10 +106,7 @@ const Login = () => {
               </Button>
             </div>
             <div>
-              No account?{" "}
-              <a id="signup" aria-label="Create a Microsoft account">
-                <Link to="/register">Create one!</Link>
-              </a>
+              No account? <Link to="/register">Create one!</Link>
             </div>
           </Form>
         </div>

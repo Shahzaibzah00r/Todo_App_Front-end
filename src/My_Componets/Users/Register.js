@@ -43,7 +43,6 @@ const Register = () => {
         navigate("/login");
       }
     } catch (error) {
-      // showAlert(error.response.data.message, "danger");
       showAlert("This email is already rigistered", "danger");
       setLoading(false);
     }
@@ -120,10 +119,8 @@ const Register = () => {
                 </Button>
               </div>
               <div>
-                Already Have account?{" "}
-                <a>
-                  <Link to="/login">Click me login</Link>
-                </a>
+                Already Have account?
+                <Link to="/login">Click me login</Link>
               </div>
             </Form>
           </div>

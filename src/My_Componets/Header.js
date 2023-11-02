@@ -50,17 +50,17 @@ function Header() {
           <Nav className=" me-5 " style={{ maxHeight: "100px" }} navbarScroll>
             {localData ? (
               <>
-                <NavItem className=" me-2 my-auto">
-                  <img
-                    src={localData.userData.profilePic}
-                    style={{
-                      height: "35px",
-                      width: "35px",
-                      cursor: "pointer",
-                      borderRadius: "100%",
-                    }}
-                  />
-                </NavItem>
+                
+                <img
+                  className=" me-2 my-auto"
+                  src={localData.userData.profilePic}
+                  style={{
+                    height: "35px",
+                    width: "35px",
+                    cursor: "pointer",
+                    borderRadius: "100%",
+                  }}
+                />
                 <NavDropdown
                   title={lcData}
                   id="navbarScrollingDropdown"

@@ -23,7 +23,7 @@ function EditNodes(props) {
     setTimeout(() => {
       setError(null);
       setShow(false);
-    }, 1000);
+    }, 1500);
   };
 
   const handleShow = async (e) => {
@@ -35,7 +35,7 @@ function EditNodes(props) {
         // "http://localhost:5000/users/" + props.child
         "https://todoapplication.up.railway.app/users/" + props.child
       );
-      console.log("Edited", getDataServer.data.User);
+      // console.log("Edited", getDataServer.data.User);
       if (getDataServer) {
         setNote(getDataServer.data.User);
       }
@@ -54,16 +54,14 @@ function EditNodes(props) {
         note
       );
 
+      setLoader(false);
       if (dataSubmited) {
-        setLoader(false);
-
         setShowAlert("Data successfully Updated", "success");
       }
     } catch (error) {
       setLoader(false);
-
       setShowAlert("Data coudln't be Updated", "danger");
-      console.log("Error while putting data to server:", error);
+      // console.log("Error while putting data to server:", error);
     }
   };
   return (

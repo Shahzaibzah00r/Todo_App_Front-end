@@ -46,10 +46,10 @@ const Mynotes = () => {
           `https://todoapplication.up.railway.app/users/${id}`
         );
         if (nodeDete) {
-          window.alert("Node has been deleted");
+          alert("Node has been deleted");
         }
       } catch (error) {
-        window.alert("Can't be Deleted due to remote or server");
+        alert("Can't be Deleted due to remote or server");
       }
     }
   };
@@ -151,7 +151,6 @@ const Mynotes = () => {
                                 }
                               >
                                 {note.title}
-                                {/* {note.done ? true : note.title} */}
                               </div>
                             </Accordion.Header>
                           </span>

@@ -34,7 +34,7 @@ function CreateNode() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("localEmail in new notes:", localEmail);
+      // console.log("localEmail in new notes:", localEmail);
       setLoader(true);
 
       const postNotes = await axios.post(
@@ -116,16 +116,6 @@ function CreateNode() {
                 placeholder="Body of node..."
               />
             </Form.Group>
-
-            {/* <Accordion>
-                <Accordion.Header>Preview</Accordion.Header>
-                <Accordion.Body eventKey="0">
-                  <Card>
-                    <Markdown>{markup}</Markdown>
-                  </Card>
-                </Accordion.Body>
-              </Accordion> */}
-
             <div className="d-flex ">
               <Button
                 variant="secondary"
@@ -141,7 +131,6 @@ function CreateNode() {
             </div>
           </Form>
         </Modal.Body>
-        {/* <Modal.Footer></Modal.Footer> */}
       </Modal>
     </>
   );
