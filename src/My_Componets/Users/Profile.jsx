@@ -46,7 +46,8 @@ const Profile = () => {
       try {
         setLoading(true);
         const updateProfle = await axios.patch(
-          "http://localhost:5000/updateProfle",
+          // "http://localhost:5000/updateProfle",
+          "https://todoapplication.up.railway.app/updateProfle",
           formData,
           { config }
         );

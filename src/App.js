@@ -15,8 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/mynotes" element={<Mynotes />} />
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/register" element={<Register />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/mynotes/newnode" element={<CreateNode />} />
         <Route path="/mynotes/:id" element={<EditNodes />} />

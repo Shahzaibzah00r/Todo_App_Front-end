@@ -29,40 +29,10 @@ const Login = () => {
       setIsError(null);
     }, 1500);
   };
-  const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  const passw =
-    /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{7,15}$/;
-  // const handleChange = (e) => {
-  //   const newObj = { ...values, [e.target.name]: e.target.value };
-  //   setValues(newObj);
-  //   const errObj = {};
-  //   setError(errObj);
-
-  //   if (!values?.email.match(mailformat)) {
-  //     setButtonSubmit(true);
-  //     errObj.email = "Please enter valid email";
-  //   } else if (values.email.trim().length === "") {
-  //     setButtonSubmit(true);
-  //     errObj.email = "Please enter email";
-  //   } else {
-  //     setButtonSubmit(false);
-  //     setIsValid("Email is valid");
-  //   }
-  //   if (!values.password.match(passw)) {
-  //     setButtonSubmit(true);
-  //     errObj.password = "Password should be contain all chars";
-  //   } else if (values.password.trim().length === "") {
-  //     setButtonSubmit(true);
-  //     errObj.password = "Please enter password";
-  //   } else {
-  //     setButtonSubmit(false);
-  //     setIsValid("Password is valid");
-  //   }
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // if (email.match(mailformat) && password.match(passw)) {
+   
     try {
       const config = {
         headers: {
@@ -71,13 +41,18 @@ const Login = () => {
       };
       setLoading(true);
       await axios
-        .post("http://localhost:5000/login", { email, password }, config)
+        // .post("http://localhost:5000/login", { email, password }, config)
+        .post(
+          "https://todoapplication.up.railway.app/login",
+          { email, password },
+          config
+        )
         .then((res) => {
           if (res.data) {
             showAlert("User logged in", "success");
             navigate("/Mynotes");
             localStorage.setItem("newData", JSON.stringify(res.data));
-            // console.log("res.data:", res.data.userData.email);
+            
           } else {
             console.log("Invalid credentials from server");
             showAlert("Credentials from server", "danger");

@@ -38,7 +38,8 @@ function CreateNode() {
       setLoader(true);
 
       const postNotes = await axios.post(
-        "http://localhost:5000/users/post",
+        // "http://localhost:5000/users/post",
+        "https://todoapplication.up.railway.app/users/post",
         notes
       );
       // .catch((err) => {

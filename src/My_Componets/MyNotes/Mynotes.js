@@ -20,9 +20,13 @@ const Mynotes = () => {
   const getDataServer = async () => {
     try {
       const localEmain = localData.userData.email;
-      const dataServer = await axios.post("http://localhost:5000/users", {
-        email: localEmain,
-      });
+      const dataServer = await axios.post(
+        // "http://localhost:5000/users",
+        "https://todoapplication.up.railway.app/users",
+        {
+          email: localEmain,
+        }
+      );
       if (dataServer) {
         setNotes(dataServer.data.user);
       }
@@ -38,7 +42,8 @@ const Mynotes = () => {
     if (deleteYes) {
       try {
         const nodeDete = await axios.delete(
-          `http://localhost:5000/users/${id}`
+          // `http://localhost:5000/users/${id}`
+          `https://todoapplication.up.railway.app/users/${id}`
         );
         if (nodeDete) {
           window.alert("Node has been deleted");
@@ -51,7 +56,8 @@ const Mynotes = () => {
 
   const handleCheckbox = async (noteId) => {
     const doneCheckBox = await axios.put(
-      "http://localhost:5000/users/" + noteId,
+      // "http://localhost:5000/users/" + noteId,
+      "https://todoapplication.up.railway.app/users/" + noteId,
       { done: true }
     );
     if (doneCheckBox) {

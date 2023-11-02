@@ -14,13 +14,17 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const registerRes = await axios.post("http://localhost:5000/register/", {
-        fName,
-        lName,
-        email,
-        password,
-        cPassword,
-      });
+      // const registerRes = await axios.post("http://localhost:5000/register/", {
+      const registerRes = await axios.post(
+        "https://todoapplication.up.railway.app/register/",
+        {
+          fName,
+          lName,
+          email,
+          password,
+          cPassword,
+        }
+      );
       if (registerRes) {
         console.log("registerRes:", registerRes);
         navigate("/login");

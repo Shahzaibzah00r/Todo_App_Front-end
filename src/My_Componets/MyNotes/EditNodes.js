@@ -32,7 +32,8 @@ function EditNodes(props) {
     try {
       // alert(props.child);
       const getDataServer = await axios.get(
-        "http://localhost:5000/users/" + props.child
+        // "http://localhost:5000/users/" + props.child
+        "https://todoapplication.up.railway.app/users/" + props.child
       );
       console.log("Edited", getDataServer.data.User);
       if (getDataServer) {
@@ -48,7 +49,8 @@ function EditNodes(props) {
     try {
       setLoader(true);
       const dataSubmited = await axios.put(
-        "http://localhost:5000/users/" + props.child,
+        // "http://localhost:5000/users/" + props.child,
+        "https://todoapplication.up.railway.app/users/" + props.child,
         note
       );
 
