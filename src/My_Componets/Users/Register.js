@@ -43,7 +43,8 @@ const Register = () => {
         navigate("/login");
       }
     } catch (error) {
-      showAlert(error.response.data.message, "danger");
+      // showAlert(error.response.data.message, "danger");
+      showAlert("This email is already rigistered", "danger");
       setLoading(false);
     }
   };
@@ -115,8 +116,8 @@ const Register = () => {
                   className="mb-2 me-3 mt-3 d-flex "
                 >
                   Submit
+                  {loading && <Loading size="sm" />}
                 </Button>
-                {loading && <Loading />}
               </div>
               <div>
                 Already Have account?{" "}

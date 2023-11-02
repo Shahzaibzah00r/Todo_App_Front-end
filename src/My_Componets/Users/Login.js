@@ -102,8 +102,8 @@ const Login = () => {
                 className="mb-3 me-3 d-flex "
               >
                 Submit
+                {loading && <Loading size="sm" />}
               </Button>
-              {loading && <Loading />}
             </div>
             <div>
               No account?{" "}
