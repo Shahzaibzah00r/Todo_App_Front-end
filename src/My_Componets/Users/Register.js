@@ -62,6 +62,7 @@ const Register = () => {
               <Form.Group as={Col} controlId="formGridText1">
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#f7efef" }}
                   type="text"
                   placeholder="Enter FirstName"
                   required
@@ -72,6 +73,7 @@ const Register = () => {
               <Form.Group as={Col} controlId="formGridText2">
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#f7efef" }}
                   type="text"
                   onChange={(e) => setLName(e.target.value)}
                   placeholder="Enter LastName"
@@ -82,6 +84,7 @@ const Register = () => {
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label>Enter Email</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#f7efef" }}
                   type="email"
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter email"
@@ -92,6 +95,7 @@ const Register = () => {
               <Form.Group as={Col} controlId="formGridPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#f7efef" }}
                   type="password"
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Password"
@@ -101,6 +105,7 @@ const Register = () => {
               <Form.Group as={Col} controlId="formGridCPassword">
                 <Form.Label>Confirm Password</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#f7efef" }}
                   type="password"
                   onChange={(e) => setCPassword(e.target.value)}
                   placeholder="Confirm Password"
