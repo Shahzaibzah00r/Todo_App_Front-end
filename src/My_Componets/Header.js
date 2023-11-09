@@ -2,6 +2,8 @@ import { Container, Nav, Navbar, NavDropdown, NavItem } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "../My_Componets/links.css";
 import { useEffect, useState } from "react";
+import { googleLogout } from "@react-oauth/google";
+
 function Header() {
   const navigate = useNavigate();
   const [lcData, setLcData] = useState();
@@ -12,6 +14,7 @@ function Header() {
     if (isData) {
       localStorage.clear();
       navigate("/");
+      googleLogout();
     }
   };
 
