@@ -76,7 +76,10 @@ const Mynotes = () => {
       title={`Welcome back ${localData.userData.fName}`}
       child={
         <>
-          <div className="d-flex justify-content-between align-items-center me-3">
+          <div
+            // className="d-flex justify-content-between align-items-center me-3"
+            className=" d-flex justify-content-between align-items-center me-3"
+          >
             <CreateNode />
             <Row>
               <Col xs="auto">
@@ -90,7 +93,7 @@ const Mynotes = () => {
               </Col>
             </Row>
           </div>
-          <div className="mt-3">
+          <div className="mt-3 col-sm-8 col-md-10 col-lg-12 row d-flex">
             {notes.length > 0 ? (
               notes
                 .filter((note) => {
@@ -140,9 +143,15 @@ const Mynotes = () => {
                               flex: 1,
                               cursor: "pointer",
                               alignSelf: "center",
+                              // display: "flex",
+                              // flexWrap: "wrap",
                             }}
                           >
-                            <Accordion.Header as={Card.Text} eventKey="0">
+                            <Accordion.Header
+                              as={Card.Text}
+                              eventKey="0"
+                              // className="d-flex flex-wrap"
+                            >
                               <div
                                 style={
                                   note.done === true
@@ -150,10 +159,14 @@ const Mynotes = () => {
                                         fontSize: 22,
                                         opacity: "85%",
                                         textDecoration: "line-through",
+                                        display: "flex",
+                                        flexWrap: "wrap",
                                       }
                                     : {
                                         fontSize: 22,
                                         textDecoration: "none",
+                                        display: "flex",
+                                        flexWrap: "wrap",
                                       }
                                 }
                               >
@@ -161,11 +174,12 @@ const Mynotes = () => {
                               </div>
                             </Accordion.Header>
                           </span>
-                          <div className="d-flex align-items-center ">
+                          <div className="d-flex align-items-center flex-wrap">
                             <EditNodes child={note._id} disable={note.done} />
                             <Button
                               title="Delete-Node"
                               variant="danger"
+                              size="sm"
                               onClick={(event) =>
                                 deleteHandlerBtn(event, note._id)
                               }

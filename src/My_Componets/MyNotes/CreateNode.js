@@ -68,7 +68,7 @@ function CreateNode() {
       <Button
         variant="primary"
         onClick={handleShow}
-        className="ms-3 p-2 px-3 fw-bold"
+        className="mx-3 fw-bold"
         size="sm"
         title="Create Node"
       >

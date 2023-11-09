@@ -70,7 +70,7 @@ function EditNodes(props) {
         variant="primary"
         disabled={props.disable}
         onClick={handleShow}
-        className="mx-2 p-2 px-3 "
+        className="mx-2 mb-1 "
         size="sm"
         title="Edit-Node"
       >
