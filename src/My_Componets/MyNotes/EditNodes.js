@@ -32,10 +32,8 @@ function EditNodes(props) {
     try {
       // alert(props.child);
       const getDataServer = await axios.get(
-        // "http://localhost:5000/users/" + props.child
-        "https://todo-application-backend-eight.vercel.app/" + props.child
+        "https://todo-application-backend-eight.vercel.app/users/" + props.child
       );
-      // console.log("Edited", getDataServer.data.User);
       if (getDataServer) {
         setNote(getDataServer.data.User);
       }
@@ -49,7 +47,6 @@ function EditNodes(props) {
     try {
       setLoader(true);
       const dataSubmited = await axios.put(
-        // "http://localhost:5000/users/" + props.child,
         "https://todo-application-backend-eight.vercel.app/users/" + props.child,
         note
       );
@@ -61,7 +58,6 @@ function EditNodes(props) {
     } catch (error) {
       setLoader(false);
       setShowAlert("Data coudln't be Updated", "danger");
-      // console.log("Error while putting data to server:", error);
     }
   };
   return (
