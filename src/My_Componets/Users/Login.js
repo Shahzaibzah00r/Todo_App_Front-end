@@ -29,8 +29,8 @@ const Login = () => {
         setLoading(true);
         const loginGoogle = await axios.post(
           // "http://localhost:5000/loginGoogle",
-          // "https://todoapplication.up.railway.app/updateProfle",
-          "https://todoapplication.up.railway.app/loginGoogle",
+          // "https://todoapplication.up.railway.app/loginGoogle",
+          "https://todo-application-backend-eight.vercel.app/loginGoogle",
           tokenResponse,
           { headers: { Authorization: tokenResponse.access_token } }
         );
@@ -67,7 +67,7 @@ const Login = () => {
       const sendLogin = await axios
         // .post("http://localhost:5000/login", { email, password }, config)
         .post(
-          "https://todoapplication.up.railway.app/login",
+          "https://todo-application-backend-eight.vercel.app/login",
           { email, password },
           config
         );
@@ -113,7 +113,7 @@ const Login = () => {
                   <a
                     className="btn btn-block   d-flex my-3 align-items-center justify-content-center "
                     style={{ backgroundColor: "#464646", color: "white" }}
-                    // type="submit"
+                  // type="submit"
                   >
                     <i className="fa fa-github mx-2"></i>Sign in with GitHub
                   </a>

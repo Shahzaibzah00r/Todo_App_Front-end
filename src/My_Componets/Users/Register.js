@@ -29,7 +29,7 @@ const Register = () => {
       // const registerRes = await axios.post("http://localhost:5000/register/", {
       setLoading(true);
       const registerRes = await axios.post(
-        "https://todoapplication.up.railway.app/register/",
+        "https://todo-application-backend-eight.vercel.app/register/",
         {
           fName,
           lName,

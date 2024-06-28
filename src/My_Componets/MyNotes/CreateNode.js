@@ -39,7 +39,7 @@ function CreateNode() {
 
       const postNotes = await axios.post(
         // "http://localhost:5000/users/post",
-        "https://todoapplication.up.railway.app/users/post",
+        "https://todo-application-backend-eight.vercel.app/users/post",
         notes
       );
       // .catch((err) => {

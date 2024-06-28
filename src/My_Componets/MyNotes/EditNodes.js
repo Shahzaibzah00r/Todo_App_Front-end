@@ -33,7 +33,7 @@ function EditNodes(props) {
       // alert(props.child);
       const getDataServer = await axios.get(
         // "http://localhost:5000/users/" + props.child
-        "https://todoapplication.up.railway.app/users/" + props.child
+        "https://todo-application-backend-eight.vercel.app/" + props.child
       );
       // console.log("Edited", getDataServer.data.User);
       if (getDataServer) {
@@ -50,7 +50,7 @@ function EditNodes(props) {
       setLoader(true);
       const dataSubmited = await axios.put(
         // "http://localhost:5000/users/" + props.child,
-        "https://todoapplication.up.railway.app/users/" + props.child,
+        "https://todo-application-backend-eight.vercel.app/users/" + props.child,
         note
       );
 

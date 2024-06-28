@@ -22,7 +22,7 @@ const Mynotes = () => {
       const localEmain = localData.userData.email;
       const dataServer = await axios.post(
         // "http://localhost:5000/users",
-        "https://todoapplication.up.railway.app/users",
+        "https://todo-application-backend-eight.vercel.app/users",
         {
           email: localEmain,
         }
@@ -43,7 +43,7 @@ const Mynotes = () => {
       try {
         const nodeDete = await axios.delete(
           // `http://localhost:5000/users/${id}`
-          `https://todoapplication.up.railway.app/users/${id}`
+          `https://todo-application-backend-eight.vercel.app/users/${id}`
         );
         if (nodeDete) {
           alert("Node has been deleted");
@@ -57,7 +57,7 @@ const Mynotes = () => {
   const handleCheckbox = async (noteId) => {
     const doneCheckBox = await axios.put(
       // "http://localhost:5000/users/" + noteId,
-      "https://todoapplication.up.railway.app/users/" + noteId,
+      "https://todo-application-backend-eight.vercel.app/users/" + noteId,
       { done: true }
     );
     if (doneCheckBox) {
@@ -115,12 +115,12 @@ const Mynotes = () => {
                           style={
                             note.done === true
                               ? {
-                                  backgroundColor: "white",
-                                  border: "2px solid green",
-                                }
+                                backgroundColor: "white",
+                                border: "2px solid green",
+                              }
                               : {
-                                  backgroundColor: "white",
-                                }
+                                backgroundColor: "white",
+                              }
                           }
                         >
                           {/* <legend>General Information</legend> */}
@@ -150,24 +150,24 @@ const Mynotes = () => {
                             <Accordion.Header
                               as={Card.Text}
                               eventKey="0"
-                              // className="d-flex flex-wrap"
+                            // className="d-flex flex-wrap"
                             >
                               <div
                                 style={
                                   note.done === true
                                     ? {
-                                        fontSize: 22,
-                                        opacity: "85%",
-                                        textDecoration: "line-through",
-                                        display: "flex",
-                                        flexWrap: "wrap",
-                                      }
+                                      fontSize: 22,
+                                      opacity: "85%",
+                                      textDecoration: "line-through",
+                                      display: "flex",
+                                      flexWrap: "wrap",
+                                    }
                                     : {
-                                        fontSize: 22,
-                                        textDecoration: "none",
-                                        display: "flex",
-                                        flexWrap: "wrap",
-                                      }
+                                      fontSize: 22,
+                                      textDecoration: "none",
+                                      display: "flex",
+                                      flexWrap: "wrap",
+                                    }
                                 }
                               >
                                 {note.title}
